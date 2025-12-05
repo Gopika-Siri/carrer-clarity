@@ -1,2 +1,2 @@
-# carrer-clarity
-carrer guidance platform for students
+# career-clarity
+career guidance platform for students
