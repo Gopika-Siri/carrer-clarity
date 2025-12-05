@@ -1,59 +1,53 @@
 body{
     font-family:Arial;
-    background:#f5faff;
+    background:var(--porcelain);
 }
-
 header{
-    background:#1f2937;
-    color:white;
+    background:var(--carbon-black);
+    color:var(--porcelain);
     padding:20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
-
 header nav a{
-    color:white;
+    color:var(--porcelain);
     margin-left:15px;
     text-decoration:none;
 }
-
 .survey-container{
-    background:white;
+    background:var(--porcelain);
     max-width:600px;
     margin:40px auto;
     padding:30px;
     border-radius:10px;
     box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
-
 label{
     display:block;
     margin:15px 0 5px;
     font-weight:bold;
+    color:var(--onyx);
 }
-
 input, select{
     width:100%;
     padding:10px;
     margin-bottom:10px;
-    border:1px solid #ccc;
+    border:1px solid var(--palm-leaf);
     border-radius:5px;
 }
-
 button{
-    background:#2563eb;
-    color:white;
+    background:var(--palm-leaf);
+    color:var(--onyx);
     padding:12px 20px;
     border:none;
     border-radius:5px;
     cursor:pointer;
 }
-
 #resultBox{
     margin-top:20px;
     padding:15px;
-    background:#e8f3ff;
-    border-left:4px solid #2563eb;
+    background:var(--beige);
+    border-left:4px solid var(--palm-leaf);
     display:none;
 }
