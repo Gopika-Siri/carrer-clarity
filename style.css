@@ -1,0 +1,159 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* HEADER */
+header{
+    background:#1f2937;
+    padding:20px;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+header nav{
+    display:flex;
+    gap:20px;
+}
+
+header nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* HERO SECTION */
+.hero{
+    background:#eef6ff;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero button{
+    padding:12px 25px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+}
+
+/* FEATURES SECTION */
+.features{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:40px 20px;
+}
+
+.feature-card{
+    width:250px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 3px 7px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+/* FOOTER */
+.footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    margin: 8px 0;
+    color: #bbb;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #00c2ff;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* -------------------------------------- */
+/* RESPONSIVENESS (IMPORTANT PART) */
+/* -------------------------------------- */
+
+/* Small Mobile Devices */
+@media (max-width: 600px) {
+
+    header{
+        text-align:center;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    header nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .hero h1{
+        font-size:2rem;
+        padding:0 10px;
+    }
+
+    .hero{
+        padding:60px 15px;
+    }
+
+    .feature-card{
+        width:100%;
+        max-width:300px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 900px){
+
+    header nav{
+        gap:15px;
+        flex-wrap:wrap;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .feature-card{
+        width:45%;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 901px){
+    .features{
+        justify-content:center;
+    }
+}

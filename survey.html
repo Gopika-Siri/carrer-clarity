@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerWeave Survey</title>
+    <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+
+<header>
+    <div class="logo"><h2>CareerWeave</h2></div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="survey.html">Survey</a>
+    </nav>
+</header>
+
+<section class="survey-container">
+    <h1>Career Interest Survey</h1>
+
+    <form id="careerSurvey">
+
+        <label>1. What subjects do you enjoy the most?</label>
+        <select id="subjects">
+            <option>Maths</option>
+            <option>Biology</option>
+            <option>Physics</option>
+            <option>Computers</option>
+            <option>Arts</option>
+            <option>Commerce</option>
+        </select>
+
+        <label>2. What type of work excites you?</label>
+        <select id="workType">
+            <option>Problem Solving</option>
+            <option>Designing</option>
+            <option>Helping People</option>
+            <option>Business & Management</option>
+            <option>Research</option>
+        </select>
+
+        <label>3. What skills do you already have?</label>
+        <input type="text" id="skills" placeholder="e.g., coding, drawing, communication">
+
+        <label>4. Your academic stream?</label>
+        <select id="stream">
+            <option>PCM</option>
+            <option>PCB</option>
+            <option>Commerce</option>
+            <option>Arts</option>
+            <option>Diploma</option>
+        </select>
+
+        <button type="submit">Get Recommendations</button>
+    </form>
+
+    <div id="resultBox"></div>
+
+</section>
+
+<script src="survey.js"></script>
+</body>
+</html>
