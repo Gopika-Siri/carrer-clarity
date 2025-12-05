@@ -3,16 +3,68 @@
     --porcelain:#f7f7f2ff;
     --beige:#e4e6c3ff;
     --palm-leaf:#899878ff;
-    --carbon-black:#222725ff;
-    --onyx:#121113ff;
+    --carbon-black:rgb(1, 52, 31);
+    --onyx:rgb(35, 5, 65);
 }
 
 *{
-    margin:0;
+    
     padding:0;
     box-sizing:border-box;
     font-family:Arial, sans-serif;
 }
+
+body{
+    height: 100%;
+    margin:0;
+    
+    background:var(--porcelain);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.content{
+   flex:1; 
+}
+
+/* ----------------------------------- */
+/* FIXED FOOTER — 100% WORKING VERSION */
+/* ----------------------------------- */
+
+.footer {
+    position: relative;  /* remove fixed */
+    width: 100%;
+    background: var(--onyx);
+    color: var(--porcelain);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 0;
+}
+
+/* Footer sections */
+.footer-contact p{
+    margin:4px 0 2px 2px;
+    color:var(--beige);
+}
+.footer-social a{
+    margin:0 10px;
+    color:var(--palm-leaf);
+    text-decoration:none;
+}
+.footer-social a:hover{
+    color:var(--beige);
+}
+.footer-bottom{
+    margin-top:5px;
+    font-size:13px;
+    color:var(--beige);
+}
+
+/* -------------------------------------- */
+/* REST OF YOUR CSS (unchanged) */
+/* -------------------------------------- */
+
 header{
     background:var(--carbon-black);
     padding:20px;
@@ -41,52 +93,77 @@ header nav a{
     margin-bottom:20px;
 }
 .hero button{
-    padding:12px 25px;
-    background:var(--palm-leaf);
-    color:var(--onyx);
+    border:10px;
+    padding:10px 25px;
+    background:var(--carbon-black);
+    color:var(--porcelain);
     border:none;
     border-radius:5px;
     font-size:16px;
 }
-.features{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:20px;
-    padding:40px 20px;
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.feature-card{
-    width:250px;
-    background:var(--porcelain);
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 3px 7px rgba(0,0,0,0.1);
-    text-align:center;
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* push button to bottom */
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    border: 1px solid #e8e8e8;
+    min-height: 300px;
 }
-.footer{
-    background:var(--onyx);
-    color:var(--porcelain);
-    padding:30px 20px;
-    text-align:center;
-    margin-top:50px;
+
+.feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1f2937;
 }
-.footer-contact p{
-    margin:8px 0;
-    color:var(--beige);
+
+.feature-card p {
+    font-size: 15px;
+    color: #555;
+    flex-grow: 1;
 }
-.footer-social a{
-    margin:0 10px;
-    color:var(--palm-leaf);
-    text-decoration:none;
+
+.card-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #1f2937;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
 }
-.footer-social a:hover{
-    color:var(--beige);
+
+.card-btn:hover {
+    background: #111827;
+    transform: translateY(-3px);
 }
-.footer-bottom{
-    margin-top:20px;
-    font-size:13px;
-    color:var(--beige);
+
+/* ----------------- RESPONSIVE ----------------- */
+@media (max-width: 1024px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on medium screens */
+    }
 }
+
+@media (max-width: 600px) {
+    .features {
+        grid-template-columns: 1fr; /* 1 per row on mobile */
+    }
+}
+
 
 /* -------------------------------------- */
 /* RESPONSIVENESS (IMPORTANT PART) */
